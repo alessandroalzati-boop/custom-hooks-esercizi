@@ -1,6 +1,7 @@
 import Faq from "./components/Faq";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import ProductQuantity from "./components/ProductQuantity";
+import NotesApp from "./components/NotesApps";
 function App() {
   return (
     <div className="container my-10">
