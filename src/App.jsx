@@ -7,7 +7,6 @@ function App() {
       <h1 className="text-center text-6xl mb-4">Custom Hooks</h1>
       <div className="my-10 border-b py-4">
         <h2 className="text-4xl">Esercizio 1</h2>
-        <p>Inserisci qui i componenti dell'esercizio</p>
         <Faq question={"pasta del giorno?"} answer={"pasta al sugo"} />
         <Faq question={"carne del giorno?"} answer={"carne di bovino"} />
         <ThemeSwitcher />
