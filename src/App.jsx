@@ -1,6 +1,6 @@
 import Faq from "./components/Faq";
 import ThemeSwitcher from "./components/ThemeSwitcher";
-
+import ProductQuantity from "./components/ProductQuantity";
 function App() {
   return (
     <div className="container my-10">
@@ -14,6 +14,7 @@ function App() {
       <div className="my-10 border-b py-4">
         <h2 className="text-4xl">Esercizio 2</h2>
         <p>Inserisci qui i componenti dell'esercizio</p>
+        <ProductQuantity />
       </div>
       <div className="my-10 border-b py-4">
         <h2 className="text-4xl">Esercizio 3</h2>
