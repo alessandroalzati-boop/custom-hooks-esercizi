@@ -1,22 +1,20 @@
-import { useDebugValue, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function useLocalStorage(initialValue = 0, id) {
+export default function useLocalStorage(id, initialValue = []) {
   const [value, setvalue] = useState(() => {
-    if (localStorage.getItem(id)) return localStorage.getItem(id);
+    if (localStorage.getItem(id)) return JSON.parse(localStorage.getItem(id));
     return initialValue;
   });
-
-  useEffect(
-    () => {
-      saveValue();
-    },
-    { value },
-  );
-
-  const saveNote = (newValue) => {
-    const copiaValore = [...value, newValue];
+  const saveValue = (newValue) => {
+    const copiaValore = [...value, { id: Date.now(), note: newValue }];
     setvalue(copiaValore);
-    localStorage.setItem(id, copiaValore);
+    localStorage.setItem(id, JSON.stringify(copiaValore));
   };
-  return [value, saveValue];
+
+  const delateValue = (id) => {
+    const copiaValore = value.filter((v) => v.id !== id);
+    setvalue(copiaValore);
+    localStorage.setItem(id, JSON.stringify(copiaValore));
+  };
+  return [value, saveValue, delateValue];
 }

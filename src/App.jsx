@@ -20,6 +20,7 @@ function App() {
       <div className="my-10 border-b py-4">
         <h2 className="text-4xl">Esercizio 3</h2>
         <p>Inserisci qui i componenti dell'esercizio</p>
+        <NotesApp />
       </div>
       <div className="my-10 border-b py-4">
         <h2 className="text-4xl">Esercizio 4</h2>

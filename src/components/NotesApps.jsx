@@ -1,7 +1,8 @@
 import { useState } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 export default function NotesApp() {
-  const [value, setValue] = useStat("notes");
+  const [value, saveValue, delateValue] = useLocalStorage("notes");
 
   const [newNote, setNewNote] = useState("");
 
@@ -16,19 +17,23 @@ export default function NotesApp() {
         />
         <button
           className="bg-green-700 px-3 py-1 rounded-md text-white font-bold uppercase  mt-2"
-          onClick={setValue(newNote)}>
+          onClick={() => saveValue(newNote)}>
           Add note
         </button>
       </form>
 
       <div className="my-10 ">
-        {notes.length > 0 ? (
-          notes.map((el) => (
+        {value.length > 0 ? (
+          value.map((el) => (
             <div
               key={el.id}
               className="flex items-center justify-between bg-gray-100 p-3 rounded-md my-3">
               <div>{el.note}</div>
-              <button className="cursor-pointer">❌</button>
+              <button
+                className="cursor-pointer"
+                onClick={() => delateValue(el.id)}>
+                ❌
+              </button>
             </div>
           ))
         ) : (
