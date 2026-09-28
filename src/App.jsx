@@ -30,3 +30,6 @@ function App() {
 }
 
 export default App;
+
+/*Questo codice crea il componente principale App che importa e visualizza diversi componenti React (Faq, ThemeSwitcher, ProductQuantity, NotesApp e UserList), 
+organizzandoli in 4 esercizi sui Custom Hooks e mostrando ogni esercizio all'interno di una sezione separata della pagina.*/

@@ -45,3 +45,7 @@ export default function NotesApp() {
     </div>
   );
 }
+
+/*Questo codice crea un componente NotesApp che usa il Custom Hook useLocalStorage per salvare, 
+visualizzare e cancellare note dal Local Storage, mentre useState gestisce il testo della nuova nota e map()
+ mostra tutte le note salvate permettendo di eliminarle tramite il pulsante ❌.*/

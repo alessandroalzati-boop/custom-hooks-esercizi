@@ -15,3 +15,7 @@ export default function useCounter(initialValue = 0, step = 1, min, max) {
   };
   return { count, increment, decrement, reset };
 }
+
+/*Questo codice crea un Custom Hook React chiamato useCounter che gestisce un contatore con un valore iniziale, 
+un incremento/decremento personalizzabile, dei valori minimo e massimo e una funzione per resettare il contatore al valore iniziale,
+restituendo { count, increment, decrement, reset }.*/

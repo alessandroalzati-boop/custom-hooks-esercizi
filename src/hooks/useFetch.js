@@ -22,3 +22,5 @@ export default function useFetch(url) {
   }, [url]);
   return { data, loading, error };
 }
+/*Questo codice crea un Custom Hook React chiamato useFetch che usa useEffect e useState per fare una richiesta a un URL, 
+salvare i dati ricevuti, gestire lo stato di caricamento e gli eventuali errori, restituendo infine { data, loading, error }. */

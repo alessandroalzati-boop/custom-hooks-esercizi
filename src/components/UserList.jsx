@@ -18,3 +18,7 @@ export default function UserList() {
     </ul>
   );
 }
+
+/*Questo codice crea un componente UserList che utilizza il Custom Hook useFetch per recuperare gli utenti da un'API,
+ mostra “Caricamento...” mentre aspetta i dati, visualizza l'errore se la richiesta fallisce e, quando i dati arrivano, 
+ li percorre con map() mostrando il nome di ogni utente in una lista.*/
