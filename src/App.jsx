@@ -2,6 +2,7 @@ import Faq from "./components/Faq";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import ProductQuantity from "./components/ProductQuantity";
 import NotesApp from "./components/NotesApps";
+import UserList from "./components/UserList";
 function App() {
   return (
     <div className="container my-10">
@@ -25,6 +26,7 @@ function App() {
       <div className="my-10 border-b py-4">
         <h2 className="text-4xl">Esercizio 4</h2>
         <p>Inserisci qui i componenti dell'esercizio</p>
+        <UserList />
       </div>
     </div>
   );

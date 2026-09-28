@@ -1,20 +1,20 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
+import useFetch from "../hooks/useFetch";
 
 export default function UserList() {
-  const [users, setUsers] = useState()
-  const [error, setError] = useState()
-  const [loading, setLoading] = useState()
-
-  if (!users || error) return <p>Something went wrong</p>
-  if (loading) return <p>Please wait...</p>
+  const { data, loading, error } = useFetch(
+    "https://jsonplaceholder.typicode.com/users",
+  );
+  if (!data || error) return <p>{error}</p>;
+  if (loading) return <p>Caricamento...</p>;
 
   return (
-    <ul className='my-4 '>
-      {users.map((el) => (
-        <li className='border-b my-3' key={el.id}>
+    <ul className="my-4 ">
+      {data.map((el) => (
+        <li className="border-b my-3" key={el.id}>
           {el.name}
         </li>
       ))}
     </ul>
-  )
+  );
 }
